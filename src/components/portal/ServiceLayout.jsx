@@ -6,7 +6,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 
-import {useIsAuthenticated, useMsal} from '@azure/msal-react';
+import { useIsAuthenticated, useMsal } from '@azure/msal-react';
 import { SignInButton } from '../auth/SignInButton';
 import { SignOutButton } from '../auth/SignOutButton';
 
@@ -17,6 +17,7 @@ import Profile from '../services/Profile';
 import Topic_Schule from './Topic_Schule';
 import Topic_Schueler from './Topic_Schueler';
 import Topic_Favoriten from "./Topic_Favoriten";
+import Topic_ExamDB from "./Topic_ExamDB";
 
 const styles = {
     background: '#000',
@@ -39,25 +40,27 @@ export const ServiceLayout = (props) => {
                 <center>Service für  {accounts[0].name}</center>
                 <Router>
                     <SplitPane
-                    split="vertical"
-                    minSize={100}
-                    defaultSize={100}
-                    resizerStyle={styles}
-                >
-                    <menu>
-                        <div><Link to="/">Profile</Link></div>
-                        <div><Link to="/topic_favoriten">Favoriten</Link></div>
-                        <div><Link to="/topic_schule">Schule</Link></div>
-                        <div><Link to="/topic_schueler">Schüler</Link></div>
+                        split="vertical"
+                        minSize={100}
+                        defaultSize={100}
+                        resizerStyle={styles}
+                    >
+                        <menu>
+                            <div><Link to="/">Profile</Link></div>
+                            <div><Link to="/topic_favoriten">Favoriten</Link></div>
+                            <div><Link to="/topic_schule">Schule</Link></div>
+                            <div><Link to="/topic_schueler">Schüler</Link></div>
+                            <div><Link to="/topic_examdb">ExamDB</Link></div>
 
-                    </menu>
-                    <div>
-                        <Route exact path="/" component={Profile} />
-                        <Route path="/topic_favoriten" component={Topic_Favoriten} />
-                        <Route path="/topic_schule" component={Topic_Schule} />
-                        <Route path="/topic_schueler" component={Topic_Schueler} />
-                    </div>
-                </SplitPane>
+                        </menu>
+                        <div>
+                            <Route exact path="/" component={Profile} />
+                            <Route path="/topic_favoriten" component={Topic_Favoriten} />
+                            <Route path="/topic_schule" component={Topic_Schule} />
+                            <Route path="/topic_schueler" component={Topic_Schueler} />
+                            <Route path="/topic_examdb" component={Topic_ExamDB} />
+                        </div>
+                    </SplitPane>
                 </Router>
             </h5>
             <br />
