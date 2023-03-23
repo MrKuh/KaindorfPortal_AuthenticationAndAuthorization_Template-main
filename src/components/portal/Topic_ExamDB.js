@@ -13,5 +13,20 @@ const Topic_ExamDB = () => (
     </div>
 );
 
+function sendDataToPage() {
+    fetch('http://localhost:8080/examView.html')
+        .then(response => response.json())
+        .then(data => {
+            let html = "<table>";
+
+            data.forEach(d => html += `<tr><td>${d.id}</td><td>${d.name}</td><td>${d.address}</td></tr>`)
+
+            html += "</table";
+
+            document.getElementById("allCustomers").innerHTML = html;
+        });
+
+}
+
 
 export default Topic_ExamDB;
