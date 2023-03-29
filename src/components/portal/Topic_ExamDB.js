@@ -8,13 +8,15 @@ const Topic_ExamDB = () => (
             <img src="./images/HtlkaindorfLogo.jpg" class="service_link" alt="ExamDB"></img>
         </a>
 
+
+
         <h2>Access ExamDB</h2>
         <p>Hier werden noch weitere Schul Services stehen</p>
     </div>
 );
 
 function sendDataToPage() {
-    fetch('http://localhost:8080/examView.html')
+    fetch('http://localhost:8080/single-sign-in.html')
         .then(response => response.json())
         .then(data => {
             let html = "<table>";

@@ -40,6 +40,7 @@ const ServiceContent = () => {
 
         fetch('http://localhost:8091/access', {
             method: 'POST',
+            credentials: 'include',
             headers: {
                 //'Content-Type':'application/json'
                 'Content-Type': 'text/plain'
