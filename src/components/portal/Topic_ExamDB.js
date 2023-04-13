@@ -5,13 +5,10 @@ const Topic_ExamDB = () => (
         <h1>ExamDB Service</h1>
 
         <a href="http://localhost:8080/examView.html" target="_blank" rel="noreferrer noopener" >
-            <img src="./images/HtlkaindorfLogo.jpg" class="service_link" alt="ExamDB"></img>
+            <img src="./images/ExamDB.webp" width="300" height="300" sty alt="ExamDB"></img>
         </a>
 
-
-
         <h2>Access ExamDB</h2>
-        <p>Hier werden noch weitere Schul Services stehen</p>
     </div>
 );
 

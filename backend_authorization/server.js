@@ -44,8 +44,10 @@ app.post('/access', function (req, res) {
 
     let user = { sub: access }
 
+    //Creates the Token to verify the User in the service
     const token = jwt.sign(user, process.env.MY_SECRET, { expiresIn: "1h", header: { "typ": undefined } },);
     console.log(token);
+    //Creates a cookie with the Token to verify the User in the service
     res.cookie("token", token);
 
     // console.log("post access body=", JSON.stringify(access) );

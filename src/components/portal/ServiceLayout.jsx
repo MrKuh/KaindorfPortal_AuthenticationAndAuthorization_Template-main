@@ -18,6 +18,7 @@ import Topic_Schule from './Topic_Schule';
 import Topic_Schueler from './Topic_Schueler';
 import Topic_Favoriten from "./Topic_Favoriten";
 import Topic_ExamDB from "./Topic_ExamDB";
+import Topic_MessageApp from './Topic_MessageApp';
 
 const styles = {
     background: '#000',
@@ -51,6 +52,7 @@ export const ServiceLayout = (props) => {
                             <div><Link to="/topic_schule">Schule</Link></div>
                             <div><Link to="/topic_schueler">Schüler</Link></div>
                             <div><Link to="/topic_examdb">ExamDB</Link></div>
+                            <div><Link to="/topic_messageApp">Message App</Link></div>
 
                         </menu>
                         <div>
@@ -59,6 +61,7 @@ export const ServiceLayout = (props) => {
                             <Route path="/topic_schule" component={Topic_Schule} />
                             <Route path="/topic_schueler" component={Topic_Schueler} />
                             <Route path="/topic_examdb" component={Topic_ExamDB} />
+                            <Route path="/topic_MessageApp" component={Topic_MessageApp} />
                         </div>
                     </SplitPane>
                 </Router>
